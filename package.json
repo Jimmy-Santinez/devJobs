@@ -1,0 +1,47 @@
+{
+  "name": "devjobs",
+  "version": "1.0.0",
+  "description": "Portal DevJobs con NodeJS, Handlebars y Mongoose",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index",
+    "desarrollo": "concurrently \"npm run dev\" \"npm run watch\"",
+    "start": "node ./index.js",
+    "watch": "webpack --watch --mode development"
+  },
+  "author": "Jaime Ramon Santillan Martinez",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "axios": "^1.7.7",
+    "bcrypt": "^5.1.1",
+    "concurrently": "^9.1.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.0",
+    "handlebars": "^4.7.8",
+    "http-errors": "^2.0.0",
+    "mongoose": "^8.8.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.16",
+    "nodemailer-express-handlebars": "^6.1.2",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "shortid": "^2.2.16",
+    "slug": "^9.1.0",
+    "sweetalert2": "^11.14.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "nodemon": "^3.1.7",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  }
+}

@@ -1,0 +1,40 @@
+<main class="lista-vacantes">
+    <h2>Navegación</h2>
+    <div class="botones separador">
+        <a href="/editar-perfil" class="btn btn-azul">Editar Perfil</a>
+        <a href="/vacantes/nueva" class="btn btn-verde">Nueva Vacante</a>
+    </div>
+
+    <h2>Tus Vacantes</h2>
+    <div class="panel-administracion">
+        {{#if vacantes.length}}
+            {{#each vacantes as | vacante |}}
+                <div class="vacante ">
+                    <div class="caja">
+                        <h3>{{vacante.empresa}}</h3>
+                        <p class="puesto">{{vacante.titulo}}</p>
+
+                        <p class="candidatos">
+                            {{vacante.candidatos.length}} Candidato(s)
+                        </p>
+                    </div>
+
+                    
+                    <div class="centrar-vertical caja">
+                        <a href="/candidatos/{{vacante.id}}" data-candidatos="{{vacante._id}}" class="btn btn-verde">Candidatos</a>
+                    </div>
+                    <div class="centrar-vertical caja">
+                        <a href="/vacantes/editar/{{vacante.url}}" data-editar="{{vacante._id}}" class="btn btn-amarillo">Editar</a>
+                    </div>
+                    <div class="centrar-vertical caja">
+                        <a href="#" data-eliminar="{{vacante._id}}" class="btn btn-rojo">Eliminar</a>
+                    </div>
+                </div>
+
+            {{/each}}
+        {{else}}
+        
+            <p>No hay vacantes, crea una</p>
+        {{/if}}
+    </div>
+</main>
